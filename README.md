@@ -1,158 +1,341 @@
 # ShopNest — Royal Indian Luxury E-Commerce Marketplace
 
-[![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?style=for-the-badge&logo=vercel)](https://isha-fx728nwdb-pro-dev21.vercel.app)
-[![Render](https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://isha-backend-2qq5.onrender.com/api/v1/health)
-[![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript_6.0-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+<p align="center">
+  <strong>A premium, full-stack shopping experience inspired by Indian heritage and modern luxury.</strong>
+  <br />
+  Discover curated products through an elegant storefront backed by a secure REST API.
+</p>
 
-> **ShopNest** is a full-stack, multi-category e-commerce platform reimagined with an exquisite **Royal Indian Luxury aesthetic**. It marries the timeless majesty of Indian artisanal heritage with the performance, precision, and usability of a contemporary global marketplace.
+<p align="center">
+  <a href="https://isha-fx728nwdb-pro-dev21.vercel.app">
+    <img src="https://img.shields.io/badge/Live_Storefront-Visit_ShopNest-641C32?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Storefront" />
+  </a>
+  <a href="https://isha-backend-2qq5.onrender.com/api/v1/health">
+    <img src="https://img.shields.io/badge/Backend-Production_API-46E3B7?style=for-the-badge&logo=render&logoColor=black" alt="Production API" />
+  </a>
+  <a href="https://github.com/venkidev21/Isha">
+    <img src="https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github" alt="Source Code" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-20232A?style=flat&logo=react&logoColor=61DAFB" alt="React 19" />
+  <img src="https://img.shields.io/badge/TypeScript-6.0-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Node.js-20%2B-339933?style=flat&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express-5-000000?style=flat&logo=express&logoColor=white" alt="Express 5" />
+  <img src="https://img.shields.io/badge/Prisma-6-2D3748?style=flat&logo=prisma&logoColor=white" alt="Prisma" />
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat" alt="MIT License" />
+</p>
 
 ---
 
-## 🌐 Live Deployments
+## Overview
 
-- 🛍️ **Live Storefront (Vercel):** [https://isha-fx728nwdb-pro-dev21.vercel.app](https://isha-fx728nwdb-pro-dev21.vercel.app)
-- ⚙️ **Production REST API (Render):** [https://isha-backend-2qq5.onrender.com](https://isha-backend-2qq5.onrender.com/api/v1/health)
-- 📖 **About & Heritage:** [https://isha-fx728nwdb-pro-dev21.vercel.app/about](https://isha-fx728nwdb-pro-dev21.vercel.app/about)
+**ShopNest** is a full-stack, multi-category e-commerce platform combining a Royal Indian Luxury visual identity with modern web application architecture.
 
----
+The project brings together an editorial shopping experience, interactive product discovery, cart and wishlist management, customer accounts, checkout workflows, and a REST API designed to support the storefront.
 
-## 🎨 Design Philosophy: Royal Indian Luxury
+Its design draws inspiration from Indian craftsmanship, rich burgundy tones, antique gold accents, and contemporary luxury retail.
 
-ShopNest moves away from cookie-cutter marketplace templates to deliver a curated editorial experience:
+## Live Application
 
-| Element | Description | Specification |
+| Component | Link |
+|---|---|
+| Customer storefront | [Visit ShopNest](https://isha-fx728nwdb-pro-dev21.vercel.app) |
+| About and heritage | [Explore the About page](https://isha-fx728nwdb-pro-dev21.vercel.app/about) |
+| Backend API health endpoint | [Check API status](https://isha-backend-2qq5.onrender.com/api/v1/health) |
+| Source repository | [GitHub — Isha](https://github.com/venkidev21/Isha) |
+
+> **Deployment note:** These links identify the configured deployment URLs. Feature availability, API health, and production readiness should be verified against the live application.
+
+## Design System
+
+ShopNest uses a restrained luxury palette to create a consistent visual experience across product listings, navigation, checkout, and account pages.
+
+| Design element | Color / typography | Purpose |
 |---|---|---|
-| **Primary Maroon** | Royal Indian identity, primary actions, and badges | `#641C32` |
-| **Deep Burgundy** | Announcement strip, dark navigation, luxury footer | `#421321` |
-| **Warm Ivory** | Elegant background canvas, eliminating harsh blue/white glare | `#FAF6EF` |
-| **Pure Warm-White** | Product display surfaces with subtle hairline borders | `#FFFDFA` |
-| **Antique Gold** | Highlights, rating stars, crest marks, and micro-accents | `#B69A62` |
-| **Editorial Typography** | Headings, hero banners, and department titles | `Cormorant Garamond` (Serif) |
-| **Interface Typography** | Navigation, pricing, forms, specs, and body copy | `Manrope` (Clean Sans-Serif) |
+| Royal maroon | `#641C32` | Primary actions and brand identity |
+| Deep burgundy | `#421321` | Dark navigation and footer surfaces |
+| Warm ivory | `#FAF6EF` | Main page backgrounds |
+| Warm white | `#FFFDFA` | Product cards and content surfaces |
+| Antique gold | `#B69A62` | Subtle highlights and decorative accents |
+| Editorial typeface | Cormorant Garamond | Headings and campaign titles |
+| Interface typeface | Manrope | Navigation, forms, and body text |
 
-> 🏛️ **True Multi-Category Elegance:** The design naturally scales across high-tech acoustics, automatic horology, tailored fashion, artisanal homeware, organic wellness, and handcrafted brassware without stereotyping or excessive ornamentation.
+The design is intended to work across multiple product categories, including fashion, electronics, watches, homeware, wellness, and artisanal products.
 
----
+## Features
 
-## ✨ Key Features
+### Shopping experience
+- Editorial homepage with campaign sections and responsive calls to action.
+- Category browsing and product catalogue exploration.
+- Product cards with consistent image ratios, pricing, and discount indicators.
+- Wishlist interactions and quick-add shopping controls.
+- Dedicated cart page and slide-out cart drawer.
+- Quantity controls and dynamic shipping-progress display.
 
-- **Royal Editorial Hero:** Curated campaigns, dual-column editorial layout, and responsive luxury CTAs.
-- **Department Browsing:** Refined category pills and cards with live catalog counts.
-- **Precision Product Cards:**
-  - 4:5 luxury aspect ratio image containers with smooth hover zoom.
-  - Indian Rupee (₹) price hierarchy with understated percentage badges.
-  - Circular wishlist toggle with optimistic feedback.
-  - Express quick-add to shopping bag.
-- **Interactive Shopping Bag & Drawer:**
-  - Slide-over drawer and dedicated `/cart` page with line-item quantity controls.
-  - Dynamic free insured shipping meter.
-- **3-Step Royal Checkout:**
-  - Delivery address book management with PIN code validation.
-  - Payment gateway selection (UPI, Credit/Debit Cards, Cash on Delivery).
-  - Server-verified price totals and instant order confirmation receipts.
-- **Patron Account & Order Tracking:**
-  - Complete order history with lifecycle statuses (`Processing`, `Shipped`, `Delivered`).
-  - Order cancellation and inventory release support.
-  - Saved multi-address management.
-- **Enterprise Security:**
-  - Helmet security headers, CORS origin protection, JWT authentication, and Zod input validation.
+### Checkout and customer accounts
+- Multi-step checkout interface.
+- Delivery address management with PIN code validation.
+- Payment method selection for UPI, cards, and cash on delivery.
+- Order confirmation and order-history interfaces.
+- Order lifecycle statuses, including processing, shipped, and delivered.
+- Order cancellation and inventory-restoration workflows.
+- Saved delivery addresses.
 
----
+**Payment note:** Selecting a payment method in the interface does not by itself establish that a live payment gateway is integrated. Verify payment processing and server-side order validation before accepting real transactions.
 
-## 🛠️ Tech Stack & Architecture
+### Backend and security
+- REST API built with Node.js and Express.
+- Prisma-based database access.
+- JWT-based authentication.
+- Password hashing with bcrypt.
+- Request validation using Zod.
+- Security headers with Helmet.
+- Configurable CORS restrictions.
+- Centralized application routing and business logic.
 
-### **Frontend**
-- **Framework:** React 19 + TypeScript + Vite 8
-- **Routing:** React Router DOM v7 (SPA with `vercel.json` rewrites)
-- **Styling:** Custom Vanilla CSS Design System with CSS Variables (zero bloat, instant rendering)
-- **Icons:** Lucide React
-- **Hosting:** Vercel Global Edge Network
+Security features should be validated through testing and deployment configuration before the application is treated as production-ready.
 
-### **Backend**
-- **Runtime:** Node.js (v20+) + Express.js 5
-- **ORM:** Prisma Client v6
-- **Database:** SQLite / PostgreSQL
-- **Security:** JWT, bcryptjs, Helmet, Zod
-- **Hosting:** Render Cloud Web Service
+## Technology Stack
 
----
+### Frontend
 
-## 🚀 Local Development Setup
+| Technology | Role |
+|---|---|
+| React 19 | User interface |
+| TypeScript | Type safety |
+| Vite 8 | Development server and build tooling |
+| React Router DOM 7 | Client-side navigation |
+| Custom CSS | Responsive styling and design system |
+| Lucide React | Interface icons |
+| Vercel | Frontend hosting |
+
+### Backend
+
+| Technology | Role |
+|---|---|
+| Node.js 20+ | JavaScript runtime |
+| Express 5 | REST API framework |
+| TypeScript | Backend type safety |
+| Prisma Client 6 | Database access |
+| SQLite / PostgreSQL | Database options, depending on configuration |
+| JWT | Authentication tokens |
+| bcryptjs | Password hashing |
+| Helmet | HTTP security headers |
+| Zod | Request validation |
+| Render | Backend hosting |
+
+## Architecture
+
+```text
+ShopNest
+│
+├── Frontend (React + TypeScript + Vite)
+│   ├── Pages and components
+│   ├── Authentication context
+│   ├── Cart and wishlist state
+│   └── API client and services
+│
+└── Backend (Node.js + Express + TypeScript)
+    ├── REST API routes
+    ├── Controllers
+    ├── Services and business logic
+    ├── Authentication and validation middleware
+    └── Prisma ORM
+        └── Configured database
+```
+
+The frontend communicates with the backend through HTTP API requests. The deployed frontend and backend are hosted separately, allowing each application to be built and deployed independently.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20 or later
+- npm
+- Git
+- A database compatible with the configured Prisma schema
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/venkidev21/Isha.git
 cd Isha
 ```
 
-### 2. Backend Setup
+### 2. Configure the backend
+
 ```bash
 cd backend
 npm install
-npx prisma generate
-npx prisma db push
-npm run seed
-npm run dev
 ```
-> The API will be available at `http://localhost:5000/api/v1`
 
-### 3. Frontend Setup
+Create a backend `.env` file using the variable names expected by your application. For example:
+
+```env
+PORT=5000
+DATABASE_URL="your-database-connection-string"
+JWT_SECRET="replace-with-a-strong-random-secret"
+```
+
+> The exact environment variables depend on your code and Prisma configuration. Do not commit real credentials or production secrets.
+
+Generate the Prisma client and apply the appropriate database setup:
+
 ```bash
-cd ../frontend
-npm install
+npx prisma generate
+```
+
+For a local development database, use the migration or schema-sync workflow supported by your project. If your project uses Prisma migrations, run:
+
+```bash
+npx prisma migrate dev
+```
+
+If your project specifically uses `prisma db push`, follow that workflow instead. Configure the database provider and connection string before running either command.
+
+If a seed script is configured in `package.json`, run:
+
+```bash
+npm run seed
+```
+
+Start the backend:
+
+```bash
 npm run dev
 ```
-> The storefront will run at `http://localhost:5173`
 
----
+The API should be available at:
 
-## 🔑 Demo Access Credentials
-
-| Role | Email | Password |
-|---|---|---|
-| **Patron / Customer** | `customer@shopnest.com` | `CustomerPassword123!` |
-| **Atelier Admin** | `admin@shopnest.com` | `AdminPassword123!` |
-
----
-
-## 📁 Project Directory Structure
-
+```text
+http://localhost:5000/api/v1
 ```
+
+### 3. Configure the frontend
+
+Open another terminal:
+
+```bash
+cd frontend
+npm install
+```
+
+Create the frontend environment file expected by your API client. For a Vite application using this variable name:
+
+```env
+VITE_API_BASE_URL=http://localhost:5000/api/v1
+```
+
+Start the frontend:
+
+```bash
+npm run dev
+```
+
+Open the local URL printed by Vite, typically:
+
+```text
+http://localhost:5173
+```
+
+**Important:** Confirm the actual API environment variable name, database provider, and available npm scripts in your repository before using these commands unchanged.
+
+## Deployment
+
+### Frontend — Vercel
+
+- Import the repository into Vercel.
+- Set the frontend root directory to `frontend`.
+- Configure the production API URL using the variable expected by your frontend.
+- Build using the project's configured build script.
+- Configure SPA rewrites if required by React Router.
+- Redeploy after changing production environment variables.
+
+### Backend — Render
+
+- Create a Web Service linked to the repository.
+- Set the backend root directory to `backend`.
+- Configure the build and start commands to match `package.json`.
+- Set production environment variables in the Render dashboard.
+- Configure the database connection and run required migrations.
+- Allow only the appropriate production frontend origins through CORS.
+- Verify the health endpoint and important API routes after deployment.
+
+For a persistent production database, use a properly configured PostgreSQL instance or another supported managed database. Do not assume a local SQLite database file will persist across deployments or be shared correctly between multiple service instances.
+
+## Project Structure
+
+```text
 Isha/
 ├── backend/
 │   ├── prisma/
-│   │   ├── schema.prisma        # Prisma Database Schema
-│   │   └── seed.ts              # Catalog & User Seeder
+│   │   ├── schema.prisma
+│   │   └── seed.ts
 │   ├── src/
-│   │   ├── controllers/         # Request Handlers
-│   │   ├── middleware/          # JWT & Error Middlewares
-│   │   ├── routes/              # Express API Routes
-│   │   ├── services/            # Business Logic
-│   │   ├── app.ts               # Express Configuration
-│   │   └── server.ts            # Entrypoint
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── app.ts
+│   │   └── server.ts
 │   └── tsconfig.json
+│
 ├── frontend/
-│   ├── public/                  # Assets, Badges, Icons
+│   ├── public/
 │   ├── src/
-│   │   ├── components/          # ProductCard, Navbar, Footer, CartDrawer
-│   │   ├── context/             # Auth, Cart, Wishlist, Toast Providers
-│   │   ├── pages/               # Catalogue, ProductDetail, Checkout, Profile
-│   │   ├── services/            # API Client Layer
-│   │   └── index.css            # Royal Indian Luxury Design System
-│   └── vercel.json              # Client-Side Routing Configuration
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── index.css
+│   └── vercel.json
+│
 ├── .gitignore
 └── README.md
 ```
 
+## Demo Accounts
+
+Use demo accounts only when they have been created and verified in the configured database.
+
+| Role | Email |
+|---|---|
+| Customer | `customer@shopnest.com` |
+| Administrator | `admin@shopnest.com` |
+
+Demo passwords are intentionally omitted from this public README. Configure non-production demo credentials through your seed script and never publish real administrator credentials.
+
+## Roadmap
+
+Potential improvements for future releases:
+
+- [ ] Dedicated administrator dashboard and role-based access controls.
+- [ ] Production payment gateway integration and webhook verification.
+- [ ] Automated tests for authentication, checkout, and inventory.
+- [ ] Product image optimization and reliable image hosting.
+- [ ] Order notifications and shipment tracking integrations.
+- [ ] CI/CD checks and deployment health monitoring.
+- [ ] Accessibility and performance audits.
+
+## Contributing
+
+Contributions and constructive feedback are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes and test them.
+4. Open a pull request describing the changes.
+
+
+
 ---
 
-## 📄 License
-
-Distributed under the **MIT License**. Crafted with precision and pride for discerning shoppers.
-
----
-
-**Developed with ❤️ by [Venkatesan E (venkidev21)](https://github.com/venkidev21)**
+<p align="center">
+  <strong>ShopNest</strong>
+  <br />
+  Royal Indian Luxury. Modern E-Commerce.
+  <br />
+  Built by <a href="https://github.com/venkidev21">Venkatesan E</a>.
+</p>
