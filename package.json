@@ -1,0 +1,19 @@
+{
+  "name": "eesha-commerce-platform",
+  "version": "1.0.0",
+  "description": "Premium multi-category e-commerce platform with React frontend, Express/TypeScript backend, and transactional relational SQLite database.",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:admin": "npm --prefix admin run dev",
+    "build:backend": "npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "build:admin": "npm --prefix admin run build",
+    "build": "npm run build:backend && npm run build:frontend && npm run build:admin",
+    "test": "npm --prefix backend test",
+    "seed": "npm --prefix backend run seed"
+  },
+  "keywords": ["ecommerce", "react", "typescript", "express", "prisma", "sqlite"],
+  "author": "EESHA Engineering Team",
+  "license": "UNLICENSED"
+}

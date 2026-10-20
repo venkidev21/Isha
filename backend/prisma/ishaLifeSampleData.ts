@@ -1,0 +1,70 @@
+const sourceBase = 'https://ishalife.sadhguru.org/in';
+const imageBase = 'https://ishalife.sadhguru.org/media/catalog/product';
+
+export const ishaCategories = [
+  { name: 'Rudraksha', slug: 'rudraksha', description: 'Consecrated Rudraksha beads and malas.', imageUrl: 'https://ishalife.sadhguru.org/media/wysiwyg/megamenu/rudraksha_1.png', sortOrder: 1 },
+  { name: 'Temple Consecrated', slug: 'temple-consecrated', description: 'Consecrated offerings and devotional products.', imageUrl: 'https://ishalife.sadhguru.org/media/wysiwyg/megamenu/temple-consecrated.png', sortOrder: 2 },
+  { name: 'Yoga Store', slug: 'yogastore', description: 'Yoga essentials and practice accessories.', imageUrl: 'https://ishalife.sadhguru.org/media/wysiwyg/megamenu/yogastore.png', sortOrder: 3 },
+  { name: 'Natural Food', slug: 'natural-food', description: 'Wholesome natural foods and yogic superfoods.', imageUrl: 'https://ishalife.sadhguru.org/media/wysiwyg/megamenu/naturalfoods.png', sortOrder: 4 },
+  { name: 'Health & Immunity', slug: 'health-immunity', description: 'Natural products for everyday wellbeing.', imageUrl: 'https://ishalife.sadhguru.org/media/wysiwyg/megamenu/health_1.png', sortOrder: 5 },
+  { name: 'Clothing & Accessories', slug: 'clothings-accessories', description: 'Clothing and accessories inspired by yogic living.', imageUrl: 'https://ishalife.sadhguru.org/media/wysiwyg/megamenu/clothing_1.png', sortOrder: 6 },
+  { name: 'Body Care', slug: 'body-care', description: 'Natural body care essentials.', imageUrl: 'https://ishalife.sadhguru.org/media/wysiwyg/megamenu/bodycare_1.png', sortOrder: 7 },
+  { name: 'Home Decor', slug: 'home-decor', description: 'Objects and products for a conscious home.', imageUrl: 'https://ishalife.sadhguru.org/media/wysiwyg/megamenu/homedecore.png', sortOrder: 8 },
+  { name: 'Books', slug: 'books', description: 'Books and resources on yoga and wellbeing.', imageUrl: 'https://ishalife.sadhguru.org/media/wysiwyg/megamenu/books_1.png', sortOrder: 9 },
+];
+
+export function createIshaProducts(categoryIds: Record<string, string>) {
+  return [
+    {
+      title: 'Moringa Energy Bar',
+      slug: 'moringa-bar-single',
+      description: 'Moringa energy bar from the Natural Food collection.',
+      price: 30,
+      compareAtPrice: null,
+      sku: 'ISHA-NF-MORINGA-SINGLE',
+      categoryId: categoryIds['natural-food'],
+      isFeatured: true,
+      stock: 50,
+      lowStockThreshold: 5,
+      specifications: JSON.stringify({ 'Source URL': `${sourceBase}/moringa-bar-single` }),
+      highlights: 'Natural Food',
+      rating: 0,
+      reviewCount: 0,
+      images: [{ url: `${imageBase}/2/_/2_165_1.jpg?width=450&height=860&optimize=medium&fit=bounds`, altText: 'Moringa Energy Bar', isPrimary: true, sortOrder: 1 }],
+    },
+    {
+      title: 'Moringa Energy Bar - Pack of 10',
+      slug: 'moringa-energy-bar-pack-of-10',
+      description: 'Pack of 10 Moringa Energy Bars from the Natural Food collection.',
+      price: 290,
+      compareAtPrice: null,
+      sku: 'ISHA-NF-MORINGA-PACK10',
+      categoryId: categoryIds['natural-food'],
+      isFeatured: true,
+      stock: 50,
+      lowStockThreshold: 5,
+      specifications: JSON.stringify({ 'Source URL': `${sourceBase}/moringa-energy-bar-pack-of-10`, 'Pack Size': '10 bars' }),
+      highlights: 'Natural Food, Pack of 10',
+      rating: 0,
+      reviewCount: 0,
+      images: [{ url: `${imageBase}/5/_/5_92.jpg?width=450&height=860&optimize=medium&fit=bounds`, altText: 'Moringa Energy Bar - Pack of 10', isPrimary: true, sortOrder: 1 }],
+    },
+    {
+      title: 'Roasted Coconut with Peanut Butter Energy Bar',
+      slug: 'nf0015100001-roasted-coconut-with-peanut-butter-bar',
+      description: 'Roasted Coconut with Peanut Butter Energy Bar from the Natural Food collection.',
+      price: 70,
+      compareAtPrice: null,
+      sku: 'ISHA-NF-COCONUT-PEANUT-BAR',
+      categoryId: categoryIds['natural-food'],
+      isFeatured: true,
+      stock: 50,
+      lowStockThreshold: 5,
+      specifications: JSON.stringify({ 'Source URL': `${sourceBase}/nf0015100001-roasted-coconut-with-peanut-butter-bar` }),
+      highlights: 'Natural Food',
+      rating: 0,
+      reviewCount: 0,
+      images: [{ url: `${imageBase}/n/f/nf0015100001_1_.jpg?width=450&height=860&optimize=medium&fit=bounds`, altText: 'Roasted Coconut with Peanut Butter Energy Bar', isPrimary: true, sortOrder: 1 }],
+    },
+  ];
+}

@@ -1,0 +1,115 @@
+{
+  "source": "https://ishalife.sadhguru.org/in/",
+  "lastVerifiedAt": "2026-10-20",
+  "verificationStatus": "partial",
+  "notes": [
+    "The official storefront was inspected in a browser session.",
+    "The catalog is not complete: product listing pagination and all product detail pages were not traversed.",
+    "Prices and images below were read from the official storefront at verification time.",
+    "This manifest does not claim ShopNest is operated by or affiliated with Isha Life."
+  ],
+  "categories": [
+    {
+      "name": "Rudraksha",
+      "url": "https://ishalife.sadhguru.org/in/rudraksha"
+    },
+    {
+      "name": "Temple Consecrated",
+      "url": "https://ishalife.sadhguru.org/in/temple-consecrated"
+    },
+    {
+      "name": "Yoga Store",
+      "url": "https://ishalife.sadhguru.org/in/yoga-store"
+    },
+    {
+      "name": "Natural Food",
+      "url": "https://ishalife.sadhguru.org/in/natural-food"
+    },
+    {
+      "name": "Health & Immunity",
+      "url": "https://ishalife.sadhguru.org/in/health-immunity"
+    },
+    {
+      "name": "Clothing",
+      "url": "https://ishalife.sadhguru.org/in/clothings-accessories"
+    },
+    {
+      "name": "Body Care",
+      "url": "https://ishalife.sadhguru.org/in/body-care"
+    },
+    {
+      "name": "Home Decor",
+      "url": "https://ishalife.sadhguru.org/in/home-decor"
+    },
+    {
+      "name": "Books",
+      "url": "https://ishalife.sadhguru.org/in/books"
+    }
+  ],
+  "products": [
+    {
+      "sourceId": "moringa-bar-single",
+      "name": "Moringa Energy Bar",
+      "slug": "moringa-bar-single",
+      "category": "Natural Food",
+      "currentPrice": 30,
+      "currency": "INR",
+      "sourceUrl": "https://ishalife.sadhguru.org/in/moringa-bar-single",
+      "imageUrl": "https://ishalife.sadhguru.org/media/catalog/product/2/_/2_165_1.jpg?width=450&height=860&optimize=medium&fit=bounds",
+      "imageSourceUrl": "https://ishalife.sadhguru.org/media/catalog/product/2/_/2_165_1.jpg?width=450&height=860&optimize=medium&fit=bounds",
+      "availability": "observed",
+      "verificationStatus": "verified"
+    },
+    {
+      "sourceId": "moringa-energy-bar-pack-of-10",
+      "name": "Moringa Energy Bar - Pack of 10",
+      "slug": "moringa-energy-bar-pack-of-10",
+      "category": "Natural Food",
+      "currentPrice": 290,
+      "currency": "INR",
+      "sourceUrl": "https://ishalife.sadhguru.org/in/moringa-energy-bar-pack-of-10",
+      "imageUrl": "https://ishalife.sadhguru.org/media/catalog/product/5/_/5_92.jpg?width=450&height=860&optimize=medium&fit=bounds",
+      "imageSourceUrl": "https://ishalife.sadhguru.org/media/catalog/product/5/_/5_92.jpg?width=450&height=860&optimize=medium&fit=bounds",
+      "availability": "observed",
+      "verificationStatus": "verified"
+    },
+    {
+      "sourceId": "nf0014506601-kollu-dosa-mix-200g",
+      "name": "Kollu Dosa Mix 200g",
+      "slug": "nf0014506601-kollu-dosa-mix-200g",
+      "category": "Natural Food",
+      "currentPrice": null,
+      "currency": "INR",
+      "sourceUrl": "https://ishalife.sadhguru.org/in/nf0014506601-kollu-dosa-mix-200g",
+      "imageUrl": "https://ishalife.sadhguru.org/media/catalog/product/n/f/nf0014506601_1__1.jpg?width=450&height=860&optimize=medium&fit=bounds",
+      "imageSourceUrl": "https://ishalife.sadhguru.org/media/catalog/product/n/f/nf0014506601_1__1.jpg?width=450&height=860&optimize=medium&fit=bounds",
+      "availability": "observed",
+      "verificationStatus": "name-and-image-verified-price-pending"
+    },
+    {
+      "sourceId": "nf0015100001-roasted-coconut-with-peanut-butter-bar",
+      "name": "Roasted Coconut with Peanut Butter Energy Bar",
+      "slug": "nf0015100001-roasted-coconut-with-peanut-butter-bar",
+      "category": "Natural Food",
+      "currentPrice": 70,
+      "currency": "INR",
+      "sourceUrl": "https://ishalife.sadhguru.org/in/nf0015100001-roasted-coconut-with-peanut-butter-bar",
+      "imageUrl": "https://ishalife.sadhguru.org/media/catalog/product/n/f/nf0015100001_1_.jpg?width=450&height=860&optimize=medium&fit=bounds",
+      "imageSourceUrl": "https://ishalife.sadhguru.org/media/catalog/product/n/f/nf0015100001_1_.jpg?width=450&height=860&optimize=medium&fit=bounds",
+      "availability": "observed",
+      "verificationStatus": "verified"
+    }
+  ],
+  "homepageBanners": [
+    {
+      "alt": "Yogic Superfoods",
+      "imageUrl": "https://ishalife.sadhguru.org/media/om/homeslider/y/o/yogic-super-foods-l1-web-2026.jpg",
+      "sourceUrl": "https://ishalife.sadhguru.org/in/"
+    },
+    {
+      "alt": "Devi Silver Pendants",
+      "imageUrl": "https://ishalife.sadhguru.org/media/om/homeslider/n/a/nav26_silver_pendants_web_il02ban_1.jpg",
+      "sourceUrl": "https://ishalife.sadhguru.org/in/"
+    }
+  ]
+}

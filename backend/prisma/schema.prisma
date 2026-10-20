@@ -1,0 +1,190 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           String      @id @default(cuid())
+  email        String      @unique
+  passwordHash String?
+  googleId     String?     @unique
+  avatar       String?
+  firstName    String
+  lastName     String
+  phone        String?
+  role         String      @default("CUSTOMER") // "CUSTOMER" | "ADMIN"
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  addresses    Address[]
+  orders       Order[]
+  cart         Cart?
+  auditLogs    AuditLog[]
+}
+
+model Address {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  label        String?  // e.g. "Home", "Office"
+  fullName     String
+  phone        String
+  street       String
+  city         String
+  state        String
+  postalCode   String
+  country      String   @default("India")
+  isDefault    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  slug        String    @unique
+  description String?
+  imageUrl    String?
+  sortOrder   Int       @default(0)
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  products    Product[]
+}
+
+model Product {
+  id                 String       @id @default(cuid())
+  title              String
+  slug               String       @unique
+  description        String
+  price              Float
+  compareAtPrice     Float?
+  sku                String       @unique
+  categoryId         String
+  category           Category     @relation(fields: [categoryId], references: [id])
+  isFeatured         Boolean      @default(false)
+  isActive           Boolean      @default(true)
+  stock              Int          @default(0)
+  lowStockThreshold  Int          @default(5)
+  specifications     String?      // JSON string of key-values
+  highlights         String?      // Comma-separated or JSON string
+  rating             Float        @default(4.8)
+  reviewCount        Int          @default(24)
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+
+  images             ProductImage[]
+  cartItems          CartItem[]
+  orderItems         OrderItem[]
+  inventoryLogs      InventoryAdjustment[]
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  altText   String?
+  isPrimary Boolean  @default(false)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model Cart {
+  id        String     @id @default(cuid())
+  userId    String?    @unique
+  user      User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessionId String?    @unique
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  items     CartItem[]
+}
+
+model CartItem {
+  id        String   @id @default(cuid())
+  cartId    String
+  cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  quantity  Int      @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([cartId, productId])
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  orderNumber     String      @unique
+  userId          String?
+  user            User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
+  guestEmail      String?
+  guestName       String?
+  guestPhone      String?
+  status          String      @default("PENDING") // PENDING, PAID, PROCESSING, SHIPPED, DELIVERED, CANCELLED, REFUNDED
+  paymentStatus   String      @default("PENDING") // PENDING, COMPLETED, FAILED, REFUNDED
+  paymentMethod   String      @default("DEVELOPMENT_MOCK") // DEVELOPMENT_MOCK, COD, UPI_TEST
+  subtotal        Float
+  taxTotal        Float
+  shippingFee     Float
+  discountTotal   Float       @default(0)
+  grandTotal      Float
+  currency        String      @default("INR")
+  shippingAddress String      // Stored JSON snapshot
+  billingAddress  String?     // Stored JSON snapshot
+  idempotencyKey  String?     @unique
+  notes           String?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  items           OrderItem[]
+  inventoryLogs   InventoryAdjustment[]
+}
+
+model OrderItem {
+  id           String   @id @default(cuid())
+  orderId      String
+  order        Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId    String?
+  product      Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  productTitle String
+  productSku   String
+  unitPrice    Float
+  quantity     Int
+  totalAmount  Float
+  productImage String?
+  snapshotData String?  // JSON snapshot of product at purchase
+  createdAt    DateTime @default(now())
+}
+
+model InventoryAdjustment {
+  id             String   @id @default(cuid())
+  productId      String
+  product        Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  changeQuantity Int      // positive for restock, negative for deduction
+  previousStock  Int
+  newStock       Int
+  reason         String   // ORDER_PLACED, ORDER_CANCELLED, ADMIN_RESTOCK, MANUAL_ADJUSTMENT
+  orderId        String?
+  order          Order?   @relation(fields: [orderId], references: [id], onDelete: SetNull)
+  adminUserId    String?
+  createdAt      DateTime @default(now())
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action     String   // CREATE, UPDATE, DELETE, STATUS_CHANGE
+  entityType String   // PRODUCT, ORDER, CATEGORY, INVENTORY, USER
+  entityId   String
+  metadata   String?  // JSON formatted details
+  ipAddress  String?
+  createdAt  DateTime @default(now())
+}
